@@ -5,8 +5,8 @@ project "ImGuizmo"
     cppdialect "C++17"
     staticruntime "off"
 
-    targetdir ("bin/%{cfg.buildcfg}")
-    objdir ("bin-int/%{cfg.buildcfg}")
+    targetdir ("bin/")
+    objdir ("bin-int/")
 
     flags {"MultiProcessorCompile"}
 
