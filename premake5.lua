@@ -1,4 +1,3 @@
-
 project "ImGuizmo"
     kind "StaticLib"
     language "C++"
@@ -9,6 +8,9 @@ project "ImGuizmo"
     objdir ("bin-int/")
 
     flags {"MultiProcessorCompile"}
+
+    optimize "Full"
+    warnings "Off"
 
     files
     {
