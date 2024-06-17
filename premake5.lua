@@ -12,6 +12,9 @@ project "ImGuizmo"
     optimize "Full"
     warnings "Off"
 
+    -- Redefine to keep paths relative
+    ImGuizmoIncludeDir = prependPath("../", get_viewer_include_dirs())
+
     files
     {
         "*.h",
@@ -20,6 +23,7 @@ project "ImGuizmo"
 
     includedirs
     {
-        "%{IncludeDir.GLFW}",
-        "%{IncludeDir.IMGUI}"
+        "%{ImGuizmoIncludeDir.GLFW}",
+        "%{ImGuizmoIncludeDir.IMGUI}",
+        "."
     }
